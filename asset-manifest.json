@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.b8285483.css",
+    "main.js": "/portfolio/static/js/main.d48a3bfd.js",
+    "static/media/45.jpg": "/portfolio/static/media/45.8e77197689a6117552a4.jpg",
+    "static/media/avatar.jpg": "/portfolio/static/media/avatar.6deacff1b87d7a5909f0.jpg",
+    "static/media/1234.png": "/portfolio/static/media/1234.0dc434644b14b547685d.png",
+    "static/media/social.png": "/portfolio/static/media/social.f023828e167428755409.png",
+    "static/media/github.png": "/portfolio/static/media/github.8b483311caedaf4ac951.png",
+    "static/media/todo.png": "/portfolio/static/media/todo.259587a356a087650b6c.png",
+    "static/media/boy.png": "/portfolio/static/media/boy.1dbf553e0a82d03a7ce2.png",
+    "static/media/working.png": "/portfolio/static/media/working.a3faa90185a7e441bc50.png",
+    "static/media/time-manager.png": "/portfolio/static/media/time-manager.2367bd27d241f169f886.png",
+    "static/media/contacting.png": "/portfolio/static/media/contacting.3212ebe9eb2fef2ecaa1.png",
+    "static/media/home-button.png": "/portfolio/static/media/home-button.8e47796eecc1b8874809.png",
+    "static/media/vocabulary.png": "/portfolio/static/media/vocabulary.e8d7e83cd632415b2a21.png",
+    "static/media/martial-arts.png": "/portfolio/static/media/martial-arts.9fb90fe695a008cdc784.png",
+    "static/media/settings.png": "/portfolio/static/media/settings.346d046af3fcafd10b9a.png",
+    "static/media/together.png": "/portfolio/static/media/together.2f65ebdcb61d6e9102be.png",
+    "static/media/project.png": "/portfolio/static/media/project.692104b44fe9ee4cffc0.png",
+    "static/media/flashlight_2.png": "/portfolio/static/media/flashlight_2.9b6946bd42cf0f7751af.png",
+    "index.html": "/portfolio/index.html",
+    "main.b8285483.css.map": "/portfolio/static/css/main.b8285483.css.map",
+    "main.d48a3bfd.js.map": "/portfolio/static/js/main.d48a3bfd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b8285483.css",
+    "static/js/main.d48a3bfd.js"
+  ]
+}
