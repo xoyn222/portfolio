@@ -1,0 +1,251 @@
+@import '../sass/variables';
+@import '../sass/mixin';
+
+.container {
+    @include flex(column, space-between, normal);
+    width: 90%;
+    min-height: 85vh;
+    box-sizing: border-box;
+    align-items: center;
+    border-radius: 4px;
+    margin: 15px 0;
+    @media screen and (max-width: 1200px) {
+        width: 100%;
+    }
+    @media screen and (max-width: 1800px) {
+        margin-bottom: 12vh;
+    }
+    .titleContainer {
+        @include flex(row, center, center);
+        border-radius: 4px;
+        width: 100%;
+        height: 12%;
+        position: relative;
+        .dotContainer_left {
+            width: 15%;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            top: 5vh;
+            left: 10px;
+            .leftDot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $accentColor;
+                box-shadow: 0 0 10px $accentColor, 0 0 30px $accentColor;
+                animation: dotAnimation 2.5s linear infinite;
+                @keyframes dotAnimation {
+                    0% {
+                        margin-right: 170px;
+                        opacity: 1;
+                    }
+                    50% {
+                        margin-right: 0;
+                        opacity: 0;
+                    }
+                    100% {
+                        margin-right: 170px;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .dotContainer_right {
+            width: 15%;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            top: 5vh;
+            right: 10px;
+            .rightDot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $accentColor;
+                box-shadow: 0 0 10px $accentColor, 0 0 30px $accentColor;
+                animation: dotAnimation2 2.5s linear infinite;
+                @keyframes dotAnimation2 {
+                    0% {
+                        margin-left: 170px;
+                        opacity: 1;
+                    }
+                    50% {
+                        margin-left: 0;
+                        opacity: 0;
+                    }
+                    100% {
+                        margin-left: 170px;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .title {
+            align-self: center;
+            padding: 10px;
+            border-radius: 4px;
+            width: 100%;
+            text-align: center;
+            font-family: $textStyle;
+            text-transform: uppercase;
+            font-size: 72px;
+            animation: projectsAppear 0.7s forwards;
+            @keyframes projectsAppear {
+                0% {
+                    margin-bottom: 30%;
+                }
+                100% {
+
+                }
+            }
+            @media screen and (min-width: 2500px) {
+                font-size: 90px;
+            }
+            @media screen and (max-width: 650px) {
+                font-size: 52px;
+            }
+            @media screen and (max-width: 500px) {
+                font-size: 32px;
+            }
+            .me {
+                position: absolute;
+                color: $accentColor;
+                font-family: inherit;
+                animation: Sappear 4s forwards;
+                @keyframes Sappear {
+                    0% {
+                        transform: scale(0) rotate(0);
+                    }
+                    100% {
+                        transform: scale(1) rotate(720deg);
+                    }
+                }
+            }
+
+        }
+
+    }
+    .projectsContainer {
+        @include flex(row, space-evenly, center);
+        width: 100%;
+        min-height: 70vh;
+        border-radius: 5px;
+        flex-wrap: wrap;
+        animation: projectAppear 1s forwards;
+        @keyframes projectAppear {
+            from {
+                transform: scale(0.5);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+        .contentContainer {
+            @include flex(column, space-evenly, center);
+            height: 430px;
+            width: 400px;
+            border-radius: 4px;
+            margin-top: 20px;
+            padding-top: 20px;
+            background-color: rgba(150, 150, 150, 0.7);
+            transition: all;
+            transition-duration: 1s;
+            @media screen and (min-width: 3001px) {
+                height: 530px;
+                width: 500px;
+            }
+            @media screen and (max-width: 2400px) {
+                height: 330px;
+                width: 300px;
+            }
+            @media screen and (max-width: 500px) {
+                height: 250px;
+                width: 220px;
+            }
+            .contentContainerLight {
+                background-color: rgba(150, 150, 150, 1);
+            }
+            &:hover {
+                transform: scale(1.1);
+            }
+            .socialNetworkBack {
+                @include flex(row, center, center);
+                height: 80%;
+                width: 80%;
+                box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+                background-image: url('../images/social.png');
+                background-size: cover;
+                background-position: 0 50%;
+                border-radius: 4px;
+                margin-bottom: 15px;
+            }
+            .todolistBack {
+                @include flex(row, center, center);
+                height: 80%;
+                width: 80%;
+                box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+                border-radius: 4px;
+                background-image: url(../images/todo.png);
+                background-size: cover;
+                background-position: -120% 50%;
+                margin-bottom: 15px;
+            }
+            .counter {
+                @include flex(row, center, center);
+                height: 70%;
+                width: 70%;
+                box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+                border-radius: 4px;
+                background-image: url(../images/github.png);
+                background-size: cover;
+                background-position: 50% 50%;
+                margin-bottom: 15px;
+            }
+            .telegram {
+                @include flex(row, center, center);
+                height: 80%;
+                width: 80%;
+                box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+                border-radius: 4px;
+                background-image: url(../images/1234.png);
+                background-size: cover;
+                background-position: 50% 50%;
+                margin-bottom: 15px;
+            }
+            h3 {
+                color: lightgrey;
+                font-weight: normal;
+                font-size: 24px;
+                @media screen and (max-width: 500px) {
+                    font-size: 18px;
+                }
+            }
+            .lightH3 {
+                color: rgba(255,255,255,1);
+            }
+            span {
+                @media screen and (max-width: 500px) {
+                    font-size: 18px;
+                }
+            }
+
+        }
+        .projectLink {
+            @include flex(row, center, center);
+            width: 40%;
+            height: 20%;
+            background-color: rgba(23,23,39,0.6);
+            text-decoration: none;
+            color: whitesmoke;
+            border-radius: 1px;
+            font-size: 20px;
+        }
+        .status {
+            margin: 5px 0 10px 0;
+            color: lightgrey;
+            font-size: 24px;
+        }
+    }
+}
+

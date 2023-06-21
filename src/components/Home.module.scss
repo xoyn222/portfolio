@@ -1,0 +1,625 @@
+@import '../sass/variables.scss';
+@import '../sass/mixin.scss';
+
+.container {
+  @include flex(row, space-between, center);
+  flex-wrap: wrap;
+  width: 80%;
+  min-height: 90vh;
+  box-sizing: border-box;
+}
+
+.colorBlock {
+  background-color: #3a5ace;
+  position: fixed;
+  height: 200%;
+  width: 100%;
+  transform: rotate(-15deg);
+  left: -83%;
+  top: -50%;
+}
+
+.photoWrapper {
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.6);
+}
+
+.photo {
+  width: 30vw;
+  height: calc(100vh - 80px);
+  background-image: url(../images/avatar.jpg);
+  background-size: cover;
+  background-position: 75% 50%;
+  transition: all 1s ease;
+  &:hover {
+    transform: scale(1.1) rotate(3deg);
+  }
+}
+
+.textGreeting {
+  @include flex(column, space-evenly, center);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.name {
+  font-size: 52px;
+  font-weight: bold;
+  font-family: $textStyle;
+  box-sizing: border-box;
+  color: #3a5ace;
+}
+
+.preName {
+  font-size: inherit;
+  font-weight: bold;
+  font-family: $textStyle;
+  color: white;
+}
+
+.professionConatiner {
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+
+.profession {
+  font-size: 52px;
+  font-family: $textStyle;
+  font-weight: bold;
+  box-sizing: border-box;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid; /* рисуем курсор */
+  animation: typing 2s steps(30, end) forwards, blinking 1s infinite;
+  @keyframes blinking {
+    0% {
+      border-right-color: transparent
+    }
+    50% {
+      border-right-color: white
+    }
+    100% {
+      border-right-color: transparent
+    }
+  }
+  @keyframes typing {
+    from {
+      width: 0
+    }
+    to {
+      width: 100%
+    }
+  }
+}
+
+.aboutMeText {
+  margin-top: 20px;
+  font-size: 28px;
+  color: white;
+
+  .letsBuild {
+    margin-top: 20px;
+  }
+}
+
+.navLink {
+  @include flex(column, flex-end, center);
+  width: 80%;
+  color: white;
+  text-decoration: none;
+  transition-duration: 1s;
+  transition-property: all;
+  margin-top: 50px;
+  &:hover {
+    transform: scale(1.1);
+  }
+  &:hover .navIconContainer {
+    border-radius: 50px;
+    background-color: #3a5ace;
+  }
+}
+
+.navIconContainer {
+  @include flex(row, space-between, center);
+  border-radius: 5px;
+  width: 400px;
+  border: 1px solid #3a5ace;
+  overflow: hidden;
+  transition-duration: 0.5s;
+  transition-property: all;
+}
+
+.linkTitle {
+  font-size: 24px;
+  transition-duration: 1s;
+  transition-property: all;
+  white-space: nowrap;
+  animation: marquee 4s infinite linear;
+  overflow: hidden;
+  width: 100%;
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%)
+    }
+    100% {
+      transform: translateX(-100%)
+    }
+  }
+}
+
+.navIcon {
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: auto;
+  background-color: #3a5ace;
+  z-index: 1;
+}
+
+@media screen and (min-width: 3001px) {
+  .container {
+    width: 80%;
+  }
+  .photo {
+    width: 35vw;
+  }
+  .linkTitle {
+    font-size: 28px;
+  }
+  .navIconContainer {
+    width: 600px;
+    height: 100px;
+  }
+  .aboutMeText {
+    font-size: 45px;
+  }
+  .profession {
+    font-size: 70px;
+  }
+  .preName {
+    font-size: 70px;
+  }
+  .name {
+    font-size: 70px;
+  }
+  .navIcon {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 3000px) {
+  .container {
+    width: 80%;
+  }
+  .photo {
+    background-position: 75% 50%;
+    width: 35vw;
+  }
+  .aboutMeText {
+    font-size: 30px;
+  }
+  .profession {
+    font-size: 52px;
+  }
+  .preName {
+    font-size: 52px;
+  }
+  .name {
+    font-size: 52px;
+  }
+}
+@media screen and (max-width: 2500px) {
+  .container {
+    width: 80%;
+  }
+  .photo {
+    background-position: 75% 50%;
+    width: 30vw;
+  }
+  .aboutMeText {
+    font-size: 30px;
+  }
+  .profession {
+    font-size: 52px;
+  }
+  .preName {
+    font-size: 52px;
+  }
+  .name {
+    font-size: 52px;
+  }
+}
+@media screen and (max-width: 2000px) {
+  .container {
+    width: 75%;
+  }
+  .photo {
+    background-position: 75% 50%;
+    width: 30vw;
+  }
+  .aboutMeText {
+    font-size: 24px;
+  }
+  .profession {
+    font-size: 40px;
+  }
+  .preName {
+    font-size: 40px;
+  }
+  .name {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1800px) {
+  .container {
+    width: 80%;
+    margin-bottom: 12vh;
+  }
+  .photo {
+    background-position: 90% 50%;
+    width: 40vw;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .container {
+    width: 80%;
+  }
+  .photo {
+    background-position: 73% 50%;
+    width: 40vw;
+  }
+  .aboutMeText {
+    font-size: 22px;
+  }
+  .profession {
+    font-size: 35px;
+  }
+  .preName {
+    font-size: 35px;
+  }
+  .name {
+    font-size: 35px;
+  }
+  .navIconContainer {
+    width: 350px;
+  }
+  .navIcon {
+    width: 70px;
+    height: 70px;
+  }
+  .linkTitle {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .photo {
+    background-position: 73% 50%;
+    width: 40vw;
+  }
+  .aboutMeText {
+    font-size: 20px;
+  }
+  .profession {
+    font-size: 30px;
+  }
+  .preName {
+    font-size: 30px;
+  }
+  .name {
+    font-size: 30px;
+  }
+  .navIconContainer {
+    width: 350px;
+  }
+  .navIcon {
+    width: 70px;
+    height: 70px;
+  }
+  .linkTitle {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .photo {
+    background-position: 73% 50%;
+    width: 45vw;
+  }
+  .colorBlock {
+    display: none;
+  }
+  .aboutMeText {
+    font-size: 20px;
+  }
+  .profession {
+    font-size: 30px;
+  }
+  .preName {
+    font-size: 30px;
+  }
+  .name {
+    font-size: 30px;
+  }
+  .navIconContainer {
+    width: 350px;
+  }
+  .navIcon {
+    width: 70px;
+    height: 70px;
+  }
+  .linkTitle {
+    font-size: 20px;
+  }
+  .container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .container {
+    @include flex(column, center, center);
+    min-height: 70vh;
+    width: 100%;
+  }
+  .colorBlock {
+    display: none;
+  }
+  .photoWrapper {
+    border-radius: 50%;
+    width: 272px;
+    height: 272px;
+    border: 2px solid $accentColor;
+  }
+  .photo {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    background-position: 100% 50%;
+  }
+  .aboutMeText {
+    font-size: 20px;
+  }
+  .linkTitle {
+    font-size: 18px;
+  }
+  .profession {
+    font-size: 36px;
+  }
+  .preName {
+    font-size: 36px;
+  }
+  .name {
+    font-size: 36px;
+    margin-top: 20px;
+  }
+  .navIconContainer {
+    width: 330px;
+  }
+  .navIcon {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .container {
+    @include flex(column, center, center);
+    min-height: 70vh;
+    width: 100%;
+  }
+  .photoWrapper {
+    border-radius: 50%;
+    width: 272px;
+    height: 272px;
+    border: 2px solid $accentColor;
+  }
+  .photo {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    background-position: 100% 50%;
+  }
+  .aboutMeText {
+    font-size: 18px;
+  }
+  .linkTitle {
+    font-size: 16px;
+  }
+  .profession {
+    font-size: 30px;
+  }
+  .preName {
+    font-size: 30px;
+  }
+  .name {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  .navIconContainer {
+    width: 330px;
+  }
+  .navIcon {
+    width: 65px;
+    height: 65px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .container {
+    @include flex(column, center, center);
+    min-height: 70vh;
+    width: 100%;
+  }
+  .photoWrapper {
+    border-radius: 50%;
+    width: 272px;
+    height: 272px;
+    border: 2px solid $accentColor;
+  }
+  .photo {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    background-position: 100% 50%;
+  }
+  .aboutMeText {
+    font-size: 16px;
+  }
+  .linkTitle {
+    font-size: 14px;
+  }
+  .profession {
+    font-size: 24px;
+  }
+  .preName {
+    font-size: 24px;
+  }
+  .name {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  .navIconContainer {
+    width: 300px;
+  }
+  .navIcon {
+    width: 65px;
+    height: 65px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .container {
+    @include flex(column, center, center);
+    min-height: 70vh;
+    width: 100%;
+  }
+  .colorBlock {
+    display: none;
+  }
+  .photoWrapper {
+    border-radius: 50%;
+    width: 272px;
+    height: 272px;
+    border: 2px solid $accentColor;
+  }
+  .photo {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    background-position: 100% 50%;
+  }
+  .aboutMeText {
+    font-size: 14px;
+  }
+  .linkTitle {
+    font-size: 12px;
+  }
+  .profession {
+    font-size: 20px;
+  }
+  .preName {
+    font-size: 20px;
+  }
+  .name {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .navIconContainer {
+    width: 280px;
+  }
+  .navIcon {
+    width: 55px;
+    height: 55px;
+  }
+  .professionConatiner {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 300px) {
+  .container {
+    @include flex(column, center, center);
+    min-height: 70vh;
+    width: 100%;
+  }
+  .photoWrapper {
+    border-radius: 50%;
+    width: 202px;
+    height: 202px;
+    border: 2px solid $accentColor;
+  }
+  .photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-position: 100% 50%;
+  }
+  .aboutMeText {
+    font-size: 10px;
+  }
+  .linkTitle {
+    font-size: 8px;
+  }
+  .profession {
+    font-size: 14px;
+  }
+  .preName {
+    font-size: 14px;
+  }
+  .name {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  .navIconContainer {
+    width: 220px;
+  }
+  .navIcon {
+    width: 45px;
+    height: 45px;
+  }
+  .professionConatiner {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+
+  .photoWrapper {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: 2px solid $accentColor;
+  }
+  .photo {
+    height: 100%;
+    width: 100%;
+  }
+  .navIconContainer {
+    width: 220px;
+  }
+}
+
+@media screen and (max-width: 230px) {
+  .photoWrapper {
+    display: none;
+  }
+  .navIconContainer {
+    display: none;
+  }
+  .profession {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 82px) {
+  .container {
+    display: none;
+  }
+}
+
+.light {
+  color: #111111;
+}
+
+.lightPostText {
+  color: rgb(80, 80, 80);
+}

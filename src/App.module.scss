@@ -1,0 +1,422 @@
+@import 'sass/variables';
+@import 'sass/mixin';
+
+.App {
+    display: flex;
+    width: 100vw;
+    box-sizing: border-box;
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.navContainer {
+    background-color: #111111;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    z-index: 5;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+.navLinksContainer {
+    width: 100%;
+    display: flex;
+    height: 75vh;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main {
+    background-color: #111111;
+    width: 85%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flashLight {
+    width: 60px;
+    height: 60px;
+    margin-left: auto;
+    transform: rotate(0deg);
+    transition-duration: 0.4s;
+    transition-property: all;
+    margin-right: 60px;
+}
+
+.flashLight:hover {
+    cursor: pointer;
+}
+
+.flashLight:active {
+    transform: rotate(0deg) scale(0.8);
+}
+
+.navLink {
+    width: 80%;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition-duration: 1s;
+    transition-property: all;
+}
+
+.navLink:hover {
+    transform: scale(1.2);
+}
+
+.navLink:hover .navIconContainer {
+    width: 100%;
+    border-radius: 40px;
+}
+
+.navIconContainer {
+    border-radius: 5px;
+    width: 90px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition-duration: 1s;
+    transition-property: all;
+}
+
+.navIconContainer:hover .linkTitle {
+    margin-right: auto;
+    opacity: 1;
+    width: 90px;
+}
+.navIconContainer:hover {
+    border: 1px solid #3a5ace;
+}
+
+.linkTitle {
+    font-size: 24px;
+    margin-left: auto;
+    width: 0;
+    opacity: 0;
+    transition-duration: 1s;
+    transition-property: all;
+}
+
+.inline {
+    display: flex;
+}
+
+.ml {
+    margin-left: 6px;
+}
+
+.navIcon {
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: auto;
+}
+
+.linkContacts {
+    color: #1b79ce;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 30px 0 10px 0;
+    border: 1px solid transparent;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.linkContacts:hover {
+    background-color: rgba(42, 54, 255, 0.03);
+}
+
+.homeAnchor {
+    height: 8vh;
+    width: 100%;
+}
+
+.skillsAnchor {
+    min-height: 7.3vh;
+    width: 100%;
+}
+
+.contactMe {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 50px 0 -10px 0;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.titleContact {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.footer {
+    background-color: darkgray;
+    min-width: 100%;
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footerHeader {
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    min-width: 20%;
+    text-align: center;
+}
+
+.footerIconsContainer {
+    display: flex;
+    justify-content: space-between;
+    min-width: 20%;
+}
+
+.footerLogo {
+    height: 50px;
+    width: 50px;
+}
+
+.active {
+    background-color: #3a5ace;
+}
+
+
+@media screen and (min-width: 2801px) {
+    .navIconContainer {
+        width: 90px;
+    }
+    .navIcon {
+        width: 90px;
+        height: 90px;
+    }
+    .linkTitle {
+        font-size: 28px;
+    }
+}
+@media screen and (max-width: 2800px) {
+    .navIconContainer {
+        width: 75px;
+    }
+    .navIcon {
+        width: 70px;
+        height: 70px;
+    }
+    .linkTitle {
+        font-size: 26px;
+    }
+    .flashLight {
+        margin-right: 40px;
+    }
+}
+@media screen and (max-width: 2000px) {
+    .navContainer {
+        width: 17%;
+    }
+    .navIconContainer {
+        width: 70px;
+    }
+    .navIcon {
+        width: 70px;
+        height: 70px;
+    }
+    .linkTitle {
+        font-size: 24px;
+    }
+    .navLink {
+        width: 80%;
+    }
+    .navLink:hover {
+        color: whitesmoke;
+        transform: scale(1.1);
+    }
+}
+@media screen and (max-width: 1800px) {
+    .App {
+        flex-direction: column;
+    }
+    .navContainer {
+        height: 10vh;
+        width: 100vw;
+        top: auto;
+        right: auto;
+        bottom: 0;
+    }
+    .navLink {
+        justify-content: center;
+    }
+    .navLinksContainer {
+        flex-direction: row-reverse;
+        height: 10vh;
+    }
+    .navLink:hover {
+        transform: scale(1);
+    }
+    .navLink:hover .navIconContainer {
+        width: 70px;
+        border-radius: 15px;
+    }
+    .linkTitle {
+        display: none;
+    }
+    .main {
+        width: 100%;
+    }
+    .flashLight {
+        width: 55px;
+        height: 55px;
+        margin-left: 40px;
+    }
+    .flashLight:active {
+        transform: scale(0.8);
+    }
+}
+@media screen and (max-width: 1000px) {
+    .navLink {
+        justify-content: center;
+    }
+    .navLink:hover .navIconContainer {
+        width: 60px;
+        border-radius: 15px;
+    }
+    .linkTitle {
+        display: none;
+        width: 0;
+    }
+    .navIconContainer:hover .linkTitle {
+        display: none;
+        width: 0;
+    }
+    .main {
+        min-height: 90vh;
+    }
+    .flashLight {
+        margin-right: 0;
+        margin-left: 10px;
+    }
+    .navIcon {
+        width: 60px;
+        height: 60px;
+    }
+    .navIconContainer {
+        width: 60px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .navLink {
+        justify-content: center;
+    }
+    .navLink:hover .navIconContainer {
+        width: 50px;
+        border-radius: 15px;
+    }
+    .linkTitle {
+        display: none;
+        width: 0;
+    }
+    .navIconContainer:hover .linkTitle {
+        display: none;
+        width: 0;
+    }
+    .main {
+        min-height: 90vh;
+    }
+    .navIconContainer {
+        width: 50px;
+    }
+    .navIcon {
+        width: 50px;
+        height: 50px;
+    }
+    .flashLight {
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+    }
+}
+@media screen and (max-width: 350px) {
+    .navLink:hover .navIconContainer {
+        width: 50px;
+        border-radius: 15px;
+    }
+    .navIcon {
+        width: 50px;
+        height: 50px;
+    }
+}
+@media screen and (max-width: 300px) {
+    .navLink:hover .navIconContainer {
+        width: 40px;
+        border-radius: 15px;
+    }
+    .navIcon {
+        width: 40px;
+        height: 40px;
+    }
+    .flashLight {
+        width: 30px;
+        height: 30px;
+    }
+    .navIconContainer {
+        width: 40px;
+    }
+}
+@media screen and (max-width: 230px) {
+    .navLink {
+        width: 40px;
+    }
+    .navLink:hover .navIconContainer {
+        width: 40px;
+        border-radius: 15px;
+    }
+    .navIcon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.light {
+    background-color: #dadada;
+}
+
+.lightNav {
+    color: #111111;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
