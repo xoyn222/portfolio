@@ -12,7 +12,7 @@ export const Projects: FC<ProjectsType> = ({toggleLight}) => {
                 <div className={s.dotContainer_left}>
                     <div className={s.leftDot}></div>
                 </div>
-                <h1 className={s.title}>Project<span className={s.me}>$</span></h1>
+                <h1 className={s.title}>Project<span className={s.me}>S</span></h1>
                 <div className={s.dotContainer_right}>
                     <div className={s.rightDot}></div>
                 </div>
