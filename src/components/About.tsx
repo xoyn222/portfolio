@@ -36,7 +36,7 @@ export const About: FC<AboutType> = ({linkColorAbout, toggleLight}) => {
                         <h3 className={toggleLight ? s.lightH3 : ''}>info: <div className={s.circle}></div><div className={s.headerLine}></div></h3>
                         <p className={toggleLight ? s.lightH3 : ''}><span>First name:</span><span>Artem</span></p>
                         <p className={toggleLight ? s.lightH3 : ''}><span>Last name:</span><span>Kostuchenko</span></p>
-                        <p className={toggleLight ? s.lightH3 : ''}><span>Age:</span> <span>19</span></p>
+                        <p className={toggleLight ? s.lightH3 : ''}><span>Age:</span> <span>21</span></p>
                         <p className={toggleLight ? s.lightH3 : ''}><span>Address:</span> <span>Minsk, Belarus</span></p>
                         <p className={toggleLight ? s.lightH3 : ''}><span>Job Status:</span> <span>In active search</span></p>
                         <section className={s.personalHobbies}>
